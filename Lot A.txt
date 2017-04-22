@@ -1,0 +1,3 @@
+East
+rtsp://tech:tech@72.82.144.138:556/cam/realmonitor?channel=8&subtype=0
+East

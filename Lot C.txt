@@ -1,0 +1,6 @@
+Lot C1 
+rtsp://tech:tech@72.82.144.138:556/cam/realmonitor?channel=8&subtype=0
+0
+Lot C2
+rtsp://tech:tech@72.82.144.138:556/cam/realmonitor?channel=8&subtype=0
+1
