@@ -401,7 +401,7 @@ void Feed::doStuff() //creates a window and does all the blob detection
 
 	cv::String abc =  cam_name;
 
-	cv::imshow(abc, imgFrame2Copy);
+//	cv::imshow(abc, imgFrame2Copy);
 
 	//cv::waitKey(0);                 // uncomment this line to go frame by frame for debugging
 

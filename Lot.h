@@ -34,7 +34,7 @@ public:
 	//returns the name of the lot
 	cv::String getName();
 	//returns count for the lot
-	int Lot::getCount();
+	int getCount();
 	//returns capacity
 	cv::String getCap();
 	//returns lot id
