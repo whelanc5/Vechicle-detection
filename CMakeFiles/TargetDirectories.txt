@@ -1,0 +1,3 @@
+/home/dog-team/chris/Vechicle-detection/CMakeFiles/rebuild_cache.dir
+/home/dog-team/chris/Vechicle-detection/CMakeFiles/edit_cache.dir
+/home/dog-team/chris/Vechicle-detection/CMakeFiles/lotMonitor.dir

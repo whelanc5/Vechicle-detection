@@ -52,7 +52,7 @@ cv::String Lot::getName() {
 	return  Lot_name;
 }
 int Lot::getCount() {
-	std::cout << Lot_name << lotCount << "\n";
+	//std::cout << Lot_name << lotCount << "\n";
 	return lotCount;
 	
 }
