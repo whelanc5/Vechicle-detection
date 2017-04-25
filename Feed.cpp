@@ -423,10 +423,10 @@ void Feed::doStuff() //creates a window and does all the blob detection
 	frameCount++;
 	if (direction == "East") {
 		totalCount = carCount - carCount1;
-		std::cout << direction;
+//		std::cout << direction;
 	}
 	else {
-		std::cout << direction;
+//		std::cout << direction;
 		totalCount = carCount1 - carCount;
 	}
 }

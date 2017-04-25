@@ -36,10 +36,10 @@ int main(void) {
 	
 	
 	
-	
+		std::string lotInfo = "[";
 
-		json j;	
-		std::string holder;
+//		json j;	
+//		std::string holder= "[";
 		char chCheckForEscKey = 0;
 		int size = lot_list.size();
 		while (chCheckForEscKey != 27) { //while loops for the added cameras, will create a forloop to go through each of the feeds.
@@ -49,13 +49,20 @@ int main(void) {
 			for (int i = 0; i < size; i++) {
 				lot_list[i]->runFeeds();
 				
-				j[lot_list[i]->getId()] = { { "name", lot_list[i]->getName() },{ "curCap", lot_list[i]->getCount() }, {"maxCap", lot_list[i]->getCap() } };
-						}
+			 //= { { "name", lot_list[i]->getName() },{ "curCap", lot_list[i]->getCount() }, {"maxCap", lot_list[i]->getCap() } };
+				if(i == (size -1)){
+ 					lotInfo = lotInfo + "{ \"Name\":\"" + lot_list[i]->getName() + "\", \"Occupancy\":" + lot_list[i]->getCount() + ", \"Capacity\":" + lot_list[i]->getCap() + "}";
+ 				}	
+				else{	
+					lotInfo = lotInfo + "{ \"Name\":\"" + lot_list[i]->getName() + "\", \"Occupancy\":" + lot_list[i]->getCount() + ", \"Capacity\":" + lot_list[i]->getCap() + "},";  			
+				}
+ 			}		
+			lotInfo = lotInfo + "]";
 			std::ofstream data; //file 
 			data.open("lots.json", std::ios::trunc);
-			data <<  j;
+			data <<  lotInfo;
 			
-			
+			lotInfo = "[";
 			chCheckForEscKey = cv::waitKey(1);
 			
 			

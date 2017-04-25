@@ -1,1 +1,1 @@
-{"1":{"curCap":-2,"maxCap":"300","name":"Lot A"},"2":{"curCap":-7,"maxCap":"200","name":"Lot B"}}
+[{ "Name":"Lot A", "Occupancy":6, "Capacity":300},{ "Name":"Lot B", "Occupancy":-12, "Capacity":200}]
