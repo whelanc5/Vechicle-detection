@@ -38,7 +38,7 @@ int main(void) {
 	
 		std::string lotInfo = "[";
 
-//		json j;	
+		json j;	
 //		std::string holder= "[";
 		char chCheckForEscKey = 0;
 		int size = lot_list.size();
@@ -48,7 +48,7 @@ int main(void) {
 			
 			for (int i = 0; i < size; i++) {
 				lot_list[i]->runFeeds();
-				
+			j[lot_list[i]->getName()] =  { "curCap", lot_list[i]->getCount() } ;	
 			 //= { { "name", lot_list[i]->getName() },{ "curCap", lot_list[i]->getCount() }, {"maxCap", lot_list[i]->getCap() } };
 				if(i == (size -1)){
  					lotInfo = lotInfo + "{ \"Name\":\"" + lot_list[i]->getName() + "\", \"Occupancy\":" + lot_list[i]->getCount() + ", \"Capacity\":" + lot_list[i]->getCap() + "}";
@@ -58,9 +58,13 @@ int main(void) {
 				}
  			}		
 			lotInfo = lotInfo + "]";
+			std::ofstream count;//file for count
 			std::ofstream data; //file 
 			data.open("lots.json", std::ios::trunc);
 			data <<  lotInfo;
+			count.open("count.json", std::ios::trunc);
+                        count <<  j;
+
 			
 			lotInfo = "[";
 			chCheckForEscKey = cv::waitKey(1);
