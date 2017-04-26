@@ -1,0 +1,3 @@
+LotC1
+rtsp://tech:tech@72.82.144.138:554/cam/realmonitor?channel=5&subtype=0
+East

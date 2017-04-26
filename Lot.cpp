@@ -51,12 +51,11 @@ void Lot::runFeeds() {
 cv::String Lot::getName() {
 	return  Lot_name;
 }
-//int Lot::getCount() {
-	//std::cout << Lot_name << lotCount << "\n";
-//	return lotCount;
-	
-//}
+
 std::string Lot::getCount(){
+	if (lotCount < 0){
+		lotCount = 0;
+	}
 	std::string lotCountstr = std::to_string(lotCount);
 	return lotCountstr;
 }

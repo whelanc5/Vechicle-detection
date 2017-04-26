@@ -1,6 +1,9 @@
-Lot A
+LotA
 300
 1
-Lot B
+LotB
 200
 2
+LotC
+20
+3
