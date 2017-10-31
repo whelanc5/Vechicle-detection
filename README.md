@@ -1,4 +1,4 @@
-# Vechicle-detection
+# Vehicle-detection
 put text documents in same folder as executable
 
 Lots.txt -- holds list of lots, should be formatted as follows:
